@@ -1,0 +1,10 @@
+com.mapapp.BuildConfig
+com.mapapp.R
+com.mapapp.R$attr
+com.mapapp.R$drawable
+com.mapapp.R$id
+com.mapapp.R$layout
+com.mapapp.R$string
+com.mapapp.mpi.ext.utils.Screen:
+    9:9:public Screen()
+com.mpap.BuildConfig

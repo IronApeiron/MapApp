@@ -1,0 +1,24 @@
+com.mapapp.mpi.core.exec.LoginActivity
+com.mapapp.mpi.core.exec.LoginActivity: LoginActivity()
+com.mapapp.mpi.core.exec.LoginActivity: void onLoginClicked(android.view.View)
+com.mapapp.mpi.core.exec.LoginActivity: void onSignupClicked(android.view.View)
+com.mapapp.R$drawable: int ic_launcher
+com.mapapp.R$id: int btnLogin
+com.mapapp.R$id: int btnSignUp
+com.mapapp.R$id: int editText
+com.mapapp.R$id: int editText1
+com.mapapp.R$id: int edtxtPassword
+com.mapapp.R$id: int edtxtUserName
+com.mapapp.R$id: int pbConnect
+com.mapapp.R$id: int rbConStat
+com.mapapp.R$id: int textView
+com.mapapp.R$id: int textView1
+com.mapapp.R$id: int textView2
+com.mapapp.R$id: int textView3
+com.mapapp.R$id: int textView4
+com.mapapp.R$id: int txtConnect
+com.mapapp.R$layout: int main
+com.mapapp.R$layout: int signup
+com.mapapp.R$string: int app_name
+com.mapapp.activities.SignUpActivity
+com.mapapp.activities.SignUpActivity: SignUpActivity()

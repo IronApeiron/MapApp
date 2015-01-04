@@ -1,0 +1,9 @@
+com.mapapp.mpi.core.exec.LoginActivity -> com.mapapp.mpi.core.exec.LoginActivity:
+    android.widget.RatingBar rbConStat -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onLoginClicked(android.view.View) -> onLoginClicked
+    void onSignupClicked(android.view.View) -> onSignupClicked
+com.mapapp.activities.SignUpActivity -> com.mapapp.activities.SignUpActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.mapapp.mpi.ext.utils.Screen -> com.mapapp.a.a:
+    void showMessageDialog(java.lang.String,java.lang.String,android.content.Context) -> a

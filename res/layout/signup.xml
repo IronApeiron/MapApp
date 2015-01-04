@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@android:color/holo_orange_dark">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:id="@+id/textView"
+            android:textColor="@android:color/background_dark" android:textSize="19dp"
+            android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+            android:layout_marginTop="21dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:id="@+id/textView1"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="22dp" android:layout_alignParentTop="true"
+            android:layout_marginTop="72dp" android:textColor="@android:color/background_dark"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Password:"
+              android:id="@+id/textView2"
+              android:textColor="@android:color/background_dark"
+              android:layout_alignLeft="@+id/textView1" android:layout_alignParentTop="true"
+              android:layout_marginTop="183dp"/>
+    <EditText
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxtNewUserName"
+            android:layout_toRightOf="@+id/textView1" android:layout_alignBaseline="@+id/textView1"
+            />
+    <EditText android:layout_width="207dp" android:layout_height="wrap_content"
+              android:id="@+id/edtxtNewPassword"
+              android:layout_toRightOf="@+id/textView1" android:layout_alignParentTop="true"
+              android:layout_marginTop="176dp" android:password="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username must contain some requirements..."
+            android:id="@+id/textView3"
+            android:textColor="@android:color/background_dark" android:textSize="9dp"
+            android:layout_alignLeft="@+id/textView4" android:layout_alignParentTop="true"
+            android:layout_marginTop="112dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Password must contain some requirements..." android:id="@+id/textView4"
+              android:textSize="9dp"
+              android:textColor="@android:color/background_dark"
+              android:layout_toRightOf="@+id/textView1" android:layout_below="@+id/edtxtNewPassword"/>
+    <Button
+            android:layout_width="139dp"
+            android:layout_height="39dp"
+            android:text="Check Availibility"
+            android:id="@+id/btnChkAvail"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="104dp" android:layout_alignParentTop="true"
+            android:layout_marginTop="131dp"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:text="I agree to the Terms and Conditions outlined here."
+            android:id="@+id/chckbxTermAndCondit" android:layout_alignLeft="@+id/textView1" android:layout_alignParentTop="true"
+            android:layout_marginTop="253dp" android:textSize="14dp" android:layout_alignRight="@+id/edtxtNewUserName"
+            android:checked="false"/>
+    <Button
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up!"
+            android:id="@+id/btnSignUpQuery"
+            android:layout_alignLeft="@+id/btnChkAvail" android:layout_alignParentTop="true"
+            android:layout_marginTop="311dp" android:enabled="false"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Back"
+            android:id="@+id/btnBack" android:layout_alignParentRight="true" android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/textView"/>
+
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="40dp" android:id="@+id/pbSignUp"
+                 android:indeterminate="false" android:visibility="visible"
+                 android:layout_alignParentLeft="true" android:layout_marginLeft="154dp"
+                 android:layout_alignParentTop="true" android:layout_marginTop="367dp"/>
+</RelativeLayout>

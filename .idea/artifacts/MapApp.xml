@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="apk" name="MapApp">
+    <output-path>$PROJECT_DIR$/out/artifacts/MapApp</output-path>
+    <properties id="android-properties">
+      <options>
+        <option name="keyStoreUrl" value="file://" />
+        <option name="proGuardCfgFiles">
+          <list>
+            <option value="file://C:/Program Files/Java/jdk1.7.0_25/tools/proguard/proguard-android.txt" />
+          </list>
+        </option>
+      </options>
+    </properties>
+    <root id="archive" name="MapApp.apk">
+      <element id="android-final-package" facet="MapApp/android/Android" />
+    </root>
+  </artifact>
+</component>

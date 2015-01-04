@@ -1,0 +1,287 @@
+_____________________________________________________________________
++ Program class: com/mapapp/LoginActivity
+  Superclass:    android/app/Activity
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.mapapp.mpi.core.exec.LoginActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 53):
+  + Integer [2130903040]
+  + Integer [2131034119]
+  + String [Sign-up if you haven't already, or else log in to connect with others!]
+  + String [Welcome!]
+  + Class [android/app/Activity]
+  + Class [android/content/Intent]
+  + Class [android/widget/RatingBar]
+  + Class [com/mapapp/LoginActivity]
+  + Class [com/mapapp/a/a]
+  + Class [com/mapapp/activities/SignUpActivity]
+  + Fieldref [com/mapapp/LoginActivity.a Landroid/widget/RatingBar;]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + Methodref [com/mapapp/LoginActivity.findViewById (I)Landroid/view/View;]
+  + Methodref [com/mapapp/LoginActivity.setContentView (I)V]
+  + Methodref [com/mapapp/LoginActivity.startActivity (Landroid/content/Intent;)V]
+  + Methodref [com/mapapp/a/a.a (Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + NameAndType [a (Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V]
+  + NameAndType [a Landroid/widget/RatingBar;]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [startActivity (Landroid/content/Intent;)V]
+  + Utf8 [()V]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  + Utf8 [(Landroid/content/Intent;)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Landroid/widget/RatingBar;]
+  + Utf8 [Sign-up if you haven't already, or else log in to connect with others!]
+  + Utf8 [Welcome!]
+  + Utf8 [a]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/widget/RatingBar]
+  + Utf8 [com/mapapp/LoginActivity]
+  + Utf8 [com/mapapp/a/a]
+  + Utf8 [com/mapapp/activities/SignUpActivity]
+  + Utf8 [findViewById]
+  + Utf8 [onCreate]
+  + Utf8 [onLoginClicked]
+  + Utf8 [onSignupClicked]
+  + Utf8 [setContentView]
+  + Utf8 [startActivity]
+
+Fields (count = 1):
+  + Field:        a Landroid/widget/RatingBar;
+    Access flags: 0x2
+      = private android.widget.RatingBar a
+
+Methods (count = 4):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public LoginActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #12
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 33, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #13
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        + Integer [2130903040]
+      [8] invokevirtual #16
+        + Methodref [com/mapapp/LoginActivity.setContentView (I)V]
+      [11] ldc #4
+        + String [Welcome!]
+      [13] ldc #3
+        + String [Sign-up if you haven't already, or else log in to connect with others!]
+      [15] aload_0 v0
+      [16] invokestatic #18
+        + Methodref [com/mapapp/a/a.a (Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V]
+      [19] aload_0 v0
+      [20] aload_0 v0
+      [21] ldc #2
+        + Integer [2131034119]
+      [23] invokevirtual #15
+        + Methodref [com/mapapp/LoginActivity.findViewById (I)Landroid/view/View;]
+      [26] checkcast #7
+        + Class [android/widget/RatingBar]
+      [29] putfield #11
+        + Fieldref [com/mapapp/LoginActivity.a Landroid/widget/RatingBar;]
+      [32] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onLoginClicked(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void onLoginClicked(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 2, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onSignupClicked(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void onSignupClicked(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 17, locals = 3, stack = 4):
+      [0] new #6
+        + Class [android/content/Intent]
+      [3] dup
+      [4] aload_0 v0
+      [5] ldc #10
+        + Class [com/mapapp/activities/SignUpActivity]
+      [7] invokespecial #14
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [10] astore_2 v2
+      [11] aload_0 v0
+      [12] aload_2 v2
+      [13] invokevirtual #17
+        + Methodref [com/mapapp/LoginActivity.startActivity (Landroid/content/Intent;)V]
+      [16] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/mapapp/activities/SignUpActivity
+  Superclass:    android/app/Activity
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.mapapp.activities.SignUpActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 19):
+  + Integer [2130903041]
+  + Class [android/app/Activity]
+  + Class [com/mapapp/activities/SignUpActivity]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [com/mapapp/activities/SignUpActivity.setContentView (I)V]
+  + NameAndType [<init> ()V]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [setContentView (I)V]
+  + Utf8 [()V]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [android/app/Activity]
+  + Utf8 [com/mapapp/activities/SignUpActivity]
+  + Utf8 [onCreate]
+  + Utf8 [setContentView]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public SignUpActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #5
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        + Integer [2130903041]
+      [8] invokevirtual #6
+        + Methodref [com/mapapp/activities/SignUpActivity.setContentView (I)V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/mapapp/a/a
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.mapapp.a.a extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 31):
+  + Class [android/app/AlertDialog]
+  + Class [android/app/AlertDialog$Builder]
+  + Class [com/mapapp/a/a]
+  + Class [java/lang/Object]
+  + Methodref [android/app/AlertDialog.setMessage (Ljava/lang/CharSequence;)V]
+  + Methodref [android/app/AlertDialog.setTitle (Ljava/lang/CharSequence;)V]
+  + Methodref [android/app/AlertDialog.show ()V]
+  + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+  + Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
+  + NameAndType [<init> (Landroid/content/Context;)V]
+  + NameAndType [create ()Landroid/app/AlertDialog;]
+  + NameAndType [setMessage (Ljava/lang/CharSequence;)V]
+  + NameAndType [setTitle (Ljava/lang/CharSequence;)V]
+  + NameAndType [show ()V]
+  + Utf8 [()Landroid/app/AlertDialog;]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Ljava/lang/CharSequence;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [a]
+  + Utf8 [android/app/AlertDialog]
+  + Utf8 [android/app/AlertDialog$Builder]
+  + Utf8 [com/mapapp/a/a]
+  + Utf8 [create]
+  + Utf8 [java/lang/Object]
+  + Utf8 [setMessage]
+  + Utf8 [setTitle]
+  + Utf8 [show]
+
+Fields (count = 0):
+
+Methods (count = 1):
+  + Method:       a(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
+    Access flags: 0x9
+      = public static void a(java.lang.String,java.lang.String,android.content.Context)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 27, locals = 4, stack = 3):
+      [0] new #2
+        + Class [android/app/AlertDialog$Builder]
+      [3] dup
+      [4] aload_2 v2
+      [5] invokespecial #8
+        + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+      [8] invokevirtual #9
+        + Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
+      [11] astore_3 v3
+      [12] aload_3 v3
+      [13] aload_0 v0
+      [14] invokevirtual #6
+        + Methodref [android/app/AlertDialog.setTitle (Ljava/lang/CharSequence;)V]
+      [17] aload_3 v3
+      [18] aload_1 v1
+      [19] invokevirtual #5
+        + Methodref [android/app/AlertDialog.setMessage (Ljava/lang/CharSequence;)V]
+      [22] aload_3 v3
+      [23] invokevirtual #7
+        + Methodref [android/app/AlertDialog.show ()V]
+      [26] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
