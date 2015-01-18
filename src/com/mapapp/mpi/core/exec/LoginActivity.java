@@ -20,6 +20,8 @@ import com.mapapp.mpi.ext.utils.Screen;
 /**
  * @author Ganesh Ravendranathan
  *
+ * TODO: MUST HIDE LOGIN ACTIVITY DETAILS ON PUBLIC API RELEASE!!!!!
+ *
  * Last Edited 07/19/2013
  */
 public class LoginActivity extends Activity {
@@ -31,6 +33,8 @@ public class LoginActivity extends Activity {
 
     protected static Context context;
     protected static LoginActivity instance;
+
+    private static Activity sysServ;
 
     /**
      * Called when the activity is first created.
@@ -69,7 +73,9 @@ public class LoginActivity extends Activity {
 
         //This is where
 
-        startActivity(new Intent(this, MainActivity.class));
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
     /**
@@ -81,5 +87,6 @@ public class LoginActivity extends Activity {
         Intent myIntent = new Intent(this, SignUpActivity.class);
         startActivity(myIntent);
     }
+
 
 }

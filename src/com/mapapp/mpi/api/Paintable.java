@@ -8,6 +8,11 @@ import android.graphics.Canvas;
  */
 public interface Paintable {
 
+    /**
+     * Called on every repaint of a {@link android.graphics.Canvas}.
+     *
+     * @param c The {@link android.graphics.Canvas} to be drawn on.
+     */
     public void onDraw(Canvas c);
 
 }

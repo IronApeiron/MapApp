@@ -20,17 +20,34 @@ import com.mapapp.R;
 import java.util.Map;
 
 /**
+ * This class holds the {@link com.google.android.gms.maps.GoogleMap}. This is the core of what
+ * this app can provide.
+ *
  * @author Ganesh Ravendranathan
  */
 public class MapFragment extends Fragment {
 
+    /**
+     * A {@link com.google.android.gms.maps.GoogleMap} to be used for various reasons.
+     */
     private GoogleMap gMap;
+
+    /**
+     * An instance of {@link com.google.android.gms.maps.MapFragment}.
+     */
     public static MapFragment instance;
 
-    Fragment prevFrag;
-
+    /**
+     * A toggle to see if the map is available.
+     */
     private static boolean isReady;
 
+    /**
+     * Checks to see if the local {@link com.google.android.gms.maps.GoogleMap} is ready to be
+     * interacted with.
+     *
+     * @return True, if the {@link com.google.android.gms.maps.GoogleMap} is readty to be interacted with, false if otherwise.
+     */
     protected static boolean isReady(){
         return isReady;
     }
@@ -46,6 +63,19 @@ public class MapFragment extends Fragment {
             instance = this;
         }
         isReady = true;
+
+        MainActivity.getInstance().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                for(final Plugin p : PluginManager.getAll()){
+                    if(p.isActive()){
+                        System.out.println("ASDASDASD");
+                        p.onInit();
+                        p.hasInitialized = true;
+                    }
+                }
+            }
+        });
 
         return rootView;
     }
@@ -67,6 +97,9 @@ public class MapFragment extends Fragment {
         super.onDestroyView();
     }
 
+    /**
+     * Centers the map on the device's current {@link android.location.Location}.
+     */
     private void centerMapOnMyLocation() {
 
         com.google.android.gms.maps.MapFragment mapFrag = ((com.google.android.gms.maps.MapFragment)getFragmentManager().findFragmentById(R.id.map));
@@ -86,11 +119,11 @@ public class MapFragment extends Fragment {
             LatLng currentCoordinates = new LatLng(
                     currentLocation.getLatitude(),
                     currentLocation.getLongitude());
-            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentCoordinates, 16));
+           // mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentCoordinates, 16));
         }
     }
 
-        private Location getMyLocation() {
+        protected Location getMyLocation() {
             // Get location from GPS if it's available
             LocationManager lm = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
             Location myLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -108,8 +141,8 @@ public class MapFragment extends Fragment {
             return myLocation;
         }
 
-    public float getCameraZoomLevel(){
-        return gMap.getCameraPosition().zoom;
+    public GoogleMap getMap(){
+        return gMap;
     }
 
     public static MapFragment getInstance(){

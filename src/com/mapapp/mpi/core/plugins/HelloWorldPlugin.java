@@ -7,20 +7,24 @@ import android.graphics.Typeface;
 import com.mapapp.mpi.api.PluginDetails;
 import com.mapapp.mpi.core.exec.Plugin;
 
-/**
- * @author Ganesh Ravendranathan
- *         Last Modified: 8/31/2014 at 5:15 PM
- */
+
 @PluginDetails(author = "Ganesh Ravendranathan",
                name = "Hello World",
                description = "Says hello world on the map!",
-               version = "0.1")
+               version = "0.1",
+               requestTab = true)
 
+/**
+ * A simple plugin used to display "Hello World" on the map screen when activated.
+ *
+ * @author Ganesh Ravendranathan
+ *         Last Modified: 8/31/2014 at 5:15 PM
+ */
 public class HelloWorldPlugin extends Plugin {
 
     @Override
     public void onInit(){
-        requestTab();
+
     }
 
     @Override

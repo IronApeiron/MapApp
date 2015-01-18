@@ -6,12 +6,49 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/white">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="TakeMeThere ;)"
-            android:id="@+id/textView"
-            android:textStyle="bold" android:textColor="#ff090002"
-            android:textSize="30dp" android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+    <RelativeLayout
+            android:id="@+id/toFromContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:padding="10dp">
+
+
+        <com.mapapp.mpi.core.plugins.LocationAutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/startAutoCompTxtView"
+                android:editable="true" android:enabled="true"
+                android:hint="@string/start_insn"
+                android:background="@drawable/border"
+                android:height="50dp"
+                android:width="470dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+        <com.mapapp.mpi.core.plugins.LocationAutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/endAutoCompTxtView"
+                android:editable="true" android:enabled="true"
+                android:hint="@string/end_insn"
+                android:background="@drawable/border"
+                android:height="50dp"
+                android:width="470dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_below="@+id/startAutoCompTxtView" android:layout_alignParentLeft="true"/>
+
+        <ExpandableListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expandableListView"
+                android:layout_alignParentLeft="true" android:layout_above="@+id/btnRoute"
+                android:layout_below="@+id/endAutoCompTxtView"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Route"
+                android:id="@+id/btnRoute"
+                android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
 </RelativeLayout>

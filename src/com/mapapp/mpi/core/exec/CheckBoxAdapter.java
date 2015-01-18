@@ -1,7 +1,6 @@
 package com.mapapp.mpi.core.exec;
 
-import android.app.ActionBar;
-import android.app.ProgressDialog;
+import android.app.*;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,22 +18,40 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * TODO: Add a list for custom plugins
+ * Used to populate a list with {@link android.widget.CheckBox}s.
+ *
  * @author Ganesh Ravendranathan
  *         Last Modified: 8/31/2014 at 2:33 PM
  */
 public class CheckBoxAdapter extends BaseAdapter {
 
+    /**
+     * A set of {@link com.mapapp.mpi.core.exec.Plugin}s to be displayed on the list.
+     */
     private List<Plugin> plugins;
 
+    /**
+     * A {@link android.view.LayoutInflater} used to inflate the UI components.
+     */
     private LayoutInflater inflater;
 
+    /**
+     * The {@link android.content.Context} of the application.
+     */
     private Context ctx;
 
-    private HashMap<CheckBox, Boolean> checkBoxMap = new HashMap<>();
-
+    /**
+     * The layout ID of a single {@link android.widget.CheckBox} layout.
+     */
     private int layout;
 
+    /**
+     * Creates a new {@link com.mapapp.mpi.core.exec.CheckBoxAdapter}.
+     *
+     * @param ctx The {@link android.content.Context} of this application.
+     * @param layout The layout ID of the layout containing a single row with a checkbox.
+     * @param plugins The list of {@link com.mapapp.mpi.core.exec.Plugin}s to be displayed on the list.
+     */
     public CheckBoxAdapter(Context ctx, int layout, List<Plugin> plugins){
         this.ctx = ctx;
         this.plugins = plugins;
@@ -85,7 +102,18 @@ public class CheckBoxAdapter extends BaseAdapter {
                         PluginManager.submitNewPluginInstance((Integer) buttonView.getTag());
                         dialog.dismiss();
                     }else if (!isChecked){
-                        Paintable p = plugins.get((Integer)buttonView.getTag());
+                        Plugin plugin = plugins.get((Integer)buttonView.getTag());
+                        Paintable p = plugin;
+
+                        if(!PluginManager.pluginFragmentMap.isEmpty() &&
+                                PluginManager.pluginFragmentMap.containsKey(plugin)) {
+                            FragmentManager fm = MainActivity.getInstance().getFragmentManager();
+                            FragmentTransaction ft = fm.beginTransaction();
+                            ft.remove(PluginManager.pluginFragmentMap.get(plugin));
+                            ft.commit();
+                        }
+
+
                         if(PaintOverlayPanel.paintables.contains(p)){
                             PaintOverlayPanel.paintables.remove(p);
                         }

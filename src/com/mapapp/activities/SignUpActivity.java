@@ -8,6 +8,8 @@ import android.view.WindowManager;
 import com.mapapp.R;
 
 /**
+ * This is where the user is expected to create a new user account.
+ *
  * @author Ganesh Ravendranathan
  */
 public class SignUpActivity extends Activity {

@@ -18,6 +18,4 @@ public strictfp class Context {
         return new User(username);
     }
 
-    private final static float a = 0.01f;
-
 }

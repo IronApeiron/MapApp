@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MapApp</string>
+    <string name="start_insn">Starting Location</string>
+    <string name="end_insn">Ending Location</string>
 </resources>

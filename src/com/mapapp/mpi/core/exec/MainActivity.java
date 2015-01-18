@@ -15,19 +15,33 @@ import com.mapapp.mpi.core.db.insns.MainTabInfo;
 import java.util.ArrayList;
 
 /**
+ * This is where the {@link com.google.android.gms.maps.GoogleMap} is run, alongside with a user's
+ * {@link com.mapapp.mpi.core.exec.Plugin}s.
+ *
  * @author Ganesh Ravendranathan
  *         Last Modified: 8/31/2014 at 2:36 PM
  */
 public class MainActivity extends Activity{
 
-    private ViewPager viewPager;
-
+    /**
+     * The {@link android.app.ActionBar} of the {@link android.app.Activity}.
+     */
     protected static ActionBar actionBar;
 
+    /**
+     * An {@link java.util.ArrayList} containing the titles of plugins and the map itself.
+     */
     private ArrayList<String> mainTabTitles = new ArrayList<>();
 
+    /**
+     * Used to get methods that a non-activity class can't access.
+     */
     private static MainActivity mainActivityInstance;
 
+    /**
+     * An {@link java.util.ArrayList} containing the various {@link android.app.Fragment}s of
+     * {@link com.mapapp.mpi.core.exec.Plugin}s, the map, and a list of {@link com.mapapp.mpi.core.exec.Plugin}s.
+     */
     protected static ArrayList<Fragment> pluginFragmentTabs = new ArrayList<>();
 
     @Override
@@ -37,7 +51,7 @@ public class MainActivity extends Activity{
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.main);
 
-        mainActivityInstance = MainActivity.this;
+        mainActivityInstance = this;
 
         actionBar = getActionBar();
         actionBar.setDisplayShowHomeEnabled(false);
@@ -56,7 +70,7 @@ public class MainActivity extends Activity{
                 .setTabListener(new TabListener(new MapFragment())));
 
         actionBar.addTab(actionBar.newTab().setText(MainTabInfo.MY_PLUGINS.getTitle())
-                .setTabListener(new TabListener(new PluginFragment())));
+                .setTabListener(new TabListener(new PluginFragment())).setIcon(android.R.drawable.ic_menu_preferences));
 
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
@@ -97,7 +111,11 @@ public class MainActivity extends Activity{
         */
     }
 
-    protected static MainActivity getInstance(){
+    /**
+     * Returns an active instance of this class.
+     * @return An instance of {@link com.mapapp.mpi.core.exec.MainActivity}.
+     */
+    public static MainActivity getInstance(){
         return mainActivityInstance;
     }
 

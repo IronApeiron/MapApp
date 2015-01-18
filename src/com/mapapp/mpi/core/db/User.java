@@ -1,7 +1,5 @@
 package com.mapapp.mpi.core.db;
 
-import com.mapapp.mpi.core.crypto.CryptoService;
-
 /**
  * Creates a representation of a user.
  *
@@ -19,10 +17,6 @@ public class User {
      */
     public User(String alias){
         this.alias = alias;
-    }
-
-    public void authenticate(String password){
-        CryptoService cs = new CryptoService();
     }
 
     /**

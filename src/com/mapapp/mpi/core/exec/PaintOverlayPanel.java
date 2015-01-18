@@ -57,9 +57,10 @@ public class PaintOverlayPanel extends SurfaceView implements SurfaceHolder.Call
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        m.setRunning(true);
-        m.start();
-
+            m.setRunning(true);
+            try {
+                m.start();
+            }catch (Exception e){}
     }
 
     @Override

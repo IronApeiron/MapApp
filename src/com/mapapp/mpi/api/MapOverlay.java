@@ -10,13 +10,30 @@ import com.google.android.maps.Overlay;
 import com.mapapp.mpi.core.Context;
 
 /**
+ * This class provides the overlay on the map itself.
+ *
+ * Other developers could use this with their plugins to display information.
+ *
  * @author Ganesh Ravendranathan
  *         Last Modified: 8/31/2014 at 12:11 PM
+ *
+ * @deprecated
  */
 public class MapOverlay extends Overlay{
 
+    /*
+     * Unused.
+     */
     final GeoPoint gPoint;
+
+    /**
+     * The {@link android.content.Context} of the application.
+     */
     final Context ctx;
+
+    /*
+     * Unused
+     */
     final int drawable;
 
     public MapOverlay(Context ctx, GeoPoint gPoint, int drawable){
