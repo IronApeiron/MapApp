@@ -11,7 +11,7 @@ Requirements
 
 News
 -----
-- A major rewrite is being planned, as I've learned a lot more about the Android APIs and how to use it.
+- A major rewrite is being planned, as I've learned a lot more about the Android APIs and how to use it. This will make development easier in the long run.
 
 Planned Features and TODOs
 --------------------------
