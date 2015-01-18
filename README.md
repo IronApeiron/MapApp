@@ -9,6 +9,10 @@ Requirements
 - Google APIs SDK 4.2.2
 - Your own Google APIs debug Key, and Google Maps v2 enabled on your Google Play Developer Console account.
 
+News
+-----
+- A major rewrite is being planned, as I've learned a lot more about the Android APIs and how to use it.
+
 Planned Features and TODOs
 --------------------------
 - User Interface
