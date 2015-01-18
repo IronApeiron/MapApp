@@ -1,5 +1,5 @@
 # MapApp
-This is an app where the goal is to make a compact and unique app where anything that can be done with a digital map can be done here. These extensions of the app are called plugins, and eventually, other Android developers can create their own and perhaps monetize it too! This is a work in progress.
+This is a compact and unique app where the goal is this: anything that can be done with a digital map can be done here. These extensions of the app are called plugins, and eventually, other Android developers can create their own and perhaps monetize it too! This is a work in progress.
 
 Overall Progress [52% to Alpha Build]
 
@@ -24,4 +24,6 @@ Planned Features
 	Possibly more?
 
 This is worked on during my spare time, and so I try my best to work on this whenever I can.
+
+Credit was given where credit was due.
 		
