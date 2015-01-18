@@ -3,8 +3,11 @@ This is a compact and unique app where the goal is this: anything that can be do
 
 Overall Progress [52% to Alpha Build]
 
-Planned Features
-----------------
+Planned Features and TODOs
+--------------------------
+- User Interface
+	- Login Screen [20%]
+	- Sign Up Form [20%]
 - Map
 	- Google Maps [100%]
 - Plugins
