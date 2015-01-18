@@ -28,5 +28,5 @@ Planned Features and TODOs
 
 This is worked on during my spare time, and so I try my best to work on this whenever I can.
 
-Credit was given where credit was due.
+Credits were given wherever credits were due.
 		
