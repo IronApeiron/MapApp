@@ -3,6 +3,12 @@ This is a compact and unique app where the goal is this: anything that can be do
 
 Overall Progress [52% to Alpha Build]
 
+Requirements
+------------
+- An emulator or physical device running Android 4.2.2
+- Google APIs SDK 4.2.2
+- Your own Google APIs debug Key, and Google Maps v2 enabled on your Google Play Developer Console account.
+
 Planned Features and TODOs
 --------------------------
 - User Interface
